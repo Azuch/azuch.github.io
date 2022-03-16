@@ -21,7 +21,27 @@
 
 ## II. Advanced:
 
-- Join
+### 1. Join
+
+- SELECT FROM [table1] [option] JOIN [table2] ON [table1.id_to_ref] = [table2_id_to_ref]: It join using the FORGREIN KEY, which is set for 2 tables, like: bands.id = albums.band_id
+
+TABLE1 | TABLE2
+LEFT   | RIGHT
+
+[option]
+- INNER: Default, show only matches.
+- RIGHT: Show all of the second table 
+- LEFT: Show all of the first table.
+
+### 2. Aggregate
+
+- SELECT [Aggregate_function]([DISTINCT] colum) FROM [table]
+
+- [Aggregate_function]: SUM, MIN, MAX, COUNT...
+
+### 3. Aggregate and Group By
+
+- 
 
 ## III. The Cheat Sheet
 <details><summary>Part one</summary>
