@@ -13,7 +13,7 @@
 - UPDATE [table] SET [column = [value]] WHERE [coolumn meets condition]: Update the value of the column of the table, which meets the condition(s).
 - DELETE FROM [table] WHERE [column meets condition(s)]
 
-- [column] LIKE '%Alex%': same same.
+- [column] LIKE : %: any characters; _: 1 character.
 - BETWEEN int AND int
 - AND
 - OR
