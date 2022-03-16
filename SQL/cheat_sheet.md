@@ -4,6 +4,7 @@
 
 - PRIMARY KEY ([id_column]): The unique id for individual record of individual table.
 - FORGREIN KEY ([id_to_ref]) reference [table_dest] ([id_dest]): Reference to another id of foregein table.
+- SELECT DISTINCT [column] FROM [table]: Show unique to all duplicate
 
 ## II. The Cheat Sheet
 <details><summary>Part one</summary>
