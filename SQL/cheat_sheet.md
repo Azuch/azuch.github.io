@@ -4,3 +4,4 @@
 ![This is an image](./SQL-cheat-sheet_page-0001.jpg)
 ![This is an image](./SQL-cheat-sheet_page-0003.jpg)
 
+***Thanks sqltutorial.com***
