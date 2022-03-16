@@ -41,7 +41,10 @@ LEFT   | RIGHT
 
 ### 3. Aggregate and Group By
 
-- SELECT [col1], [col2], [col3], COUNT() gr
+- Aggregate is use on group only, when no group is selected, the whole table is a group.
+- When using group by, the aggregate will iterate on first group, the the second...
+- The Aggerate is execute after the group by, so it can not be used with the WHERE, which is before the group by.
+- Instead, we using the HAVING
 
 ## III. The Cheat Sheet
 <details><summary>Part one</summary>
