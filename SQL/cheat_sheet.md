@@ -41,7 +41,7 @@ LEFT   | RIGHT
 
 ### 3. Aggregate and Group By
 
-- 
+- SELECT [col1], [col2], [col3], COUNT() gr
 
 ## III. The Cheat Sheet
 <details><summary>Part one</summary>
