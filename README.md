@@ -4,4 +4,4 @@
 
 ## [II. SQLI](./SQLI)
 
-### [1. Find and Confirm](./SQLI/find-and-confirm.md)
+### [1. Find and Confirm](./SQLI/Find-and-Confirm.md)
