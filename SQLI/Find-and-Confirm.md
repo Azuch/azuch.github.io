@@ -33,14 +33,28 @@
 - Response Size: Differ from others.
 
 ### 4. Blind Injection
+- You can not retrieve infomation, but still can manipulate the query.
+- Only detect that some thing strange, need to look closely.
+- Like: the id=2' OR 1=1;-- will return all records, but it just return the record of id = 1. It is strange.
+- Or: the id=2' AND 1=2;-- it will return nothing, instead, it returns the record of id = 1. It is strange.
 
 ## II. Confirming
 
+### 1. Differentinating Number and Strings
+
+### 2. Inline SQL Injection
+
+
+### 3. Terminating SQL injection
+
+### 4. Time Delays
+
 ## III. Automating
 
+
 ## IV. Techniques:
--' -> injectable?
--=asdasdasda -> injectable?
+- ' -> injectable?
+- =asdasdasda -> injectable?
 - bi''kes, bi'+'kes, bi'||'kes... -> injectable?
 
 - ' and 1=1/@@version;-- -> It will execute and return a value of version in the error for number divide by int
