@@ -46,6 +46,22 @@ LEFT   | RIGHT
 - The Aggerate is execute after the group by, so it can not be used with the WHERE, which is before the group by.
 - Instead, we using the HAVING
 
+### 4. Union
+
+- Rules:
++ Same number of columns
++ Same data types.
+
+-Syntax: SELECT [col1], [col2] from [tab1] UNION SELECT [col1] [col2] from [tabs2];
+
+### 5. Nested queries
+
+- SELECT [col] from WHERE [tab] WHERE [col] IN [SELECT...FROM...WHERE...]
+
+### 6. On Delete
+
+- Set to foreign key when create table: SET NULL or CASADE (delete all).
+
 ## III. The Cheat Sheet
 <details><summary>Part one</summary>
 
