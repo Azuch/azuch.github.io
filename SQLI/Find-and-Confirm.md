@@ -120,7 +120,7 @@ https://www.victim.com/displayUser.aspx?User=Bob -> Default
 
 ## III. Automating
 
--
+- SQLMap
 
 ## IV. Techniques:
 - ' -> injectable?
