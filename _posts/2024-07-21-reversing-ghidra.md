@@ -1,5 +1,8 @@
 ok, today i gonna re the wannacry;
 
+
+![0_infected](https://github.com/user-attachments/assets/c9b9c88b-9a9a-44a2-b915-c0a47280d23e)
+
 first load it in ghidra with the following setting:
 
 	1. Decompiler Parameter ID. Why? According to the internet (i believe in you, pal): https://reverseengineering.stackexchange.com/questions/24633/function-prototypes-given-by-ghidra-is-not-consistent
@@ -22,6 +25,15 @@ first load it in ghidra with the following setting:
   
   	More sources: https://www.shogunlab.com/blog/2019/04/12/here-be-dragons-ghidra-0.html
 Okay, now the winmain is changed, let inspect it
+
+A strange url:  s_http://www.ifferfsodp9ifjaposdfj_004313d0
+Let rename it to strange_url and change its type to char*
+
+Also, after suspect the loop and looking the assembly, it just a strncpy with 14 iteration
+
+You can open ida for more info
+
+
 
 
    
